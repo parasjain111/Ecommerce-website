@@ -1,41 +1,39 @@
 {
-  "name": "ecom",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd exomer-front && npm run build",
-    "install-client": "cd exomer-front && npm install",
-    "heroku-postbuild": "npm run install-client && npm run build",
-    "client": "cd exomer-front && npm start",
-    "dev": "concurrently \"npm start\" \"npm run client\""
-  },
-  "author": "",
-  "license": "ISC",
+  "name": "exomer-front",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "@sendgrid/mail": "^7.1.0",
-    "body-parser": "^1.19.0",
-    "braintree": "^2.22.0",
-    "concurrently": "^5.2.0",
-    "cookie-parser": "^1.4.5",
-    "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "express-jwt": "^5.3.3",
-    "express-validator": "^5.3.1",
-    "formidable": "^1.2.2",
-    "g": "^2.0.1",
-    "jsonwebtoken": "^8.5.1",
-    "local-storage": "^2.0.0",
-    "lodash": "^4.17.15",
-    "mongoose": "^5.9.9",
-    "morgan": "^1.10.0",
-    "node-localstorage": "^2.1.6",
-    "nodemailer": "^6.4.6",
-    "nodemon": "^2.0.3",
-    "path": "^0.12.7",
-    "uuid": "^7.0.3"
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "braintree-web-drop-in-react": "^1.1.1",
+    "query-string": "^6.12.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^2.1.8"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  
+    "proxy": "http://localhost:5000",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
